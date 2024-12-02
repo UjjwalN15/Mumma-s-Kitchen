@@ -1,0 +1,138 @@
+@media (max-width:500px){
+    header, section, footer{
+        width: 100vw !important;
+    }
+    h1, h2, h3{
+        font-size: x-large !important;
+    }
+    h4,h5,h6{
+        font-size: medium !important;
+    }
+    p, li, a, .button, label, span{
+        font-size: small !important;
+    }
+    nav{
+        width: 100% !important;
+        position: fixed;
+        padding: 0 50px 0 0 ;
+    }
+    .container{
+        width: 100vw !important;
+    }
+    header{
+        padding: 10px;
+    }
+    #close-icon{
+        display: none;
+    }
+    .menu-bars{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        top: -100vh;
+        left: 0;
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    .nav-links ul{
+        flex-direction: column;
+        font-size: large;
+    }
+    .nav-links ul li a, .nav-links ul li a button, .social-links a i, .logobox p{
+        font-size: large  !important;
+    }
+    .nav-links{
+        flex-direction: column;
+    }
+    .header-text img{
+        height: 100px;
+        width: 100px;
+        margin-top: 50px; 
+    }
+    .header-text h1 , .header-text h2, .header-text h3{
+        font-size: medium !important;
+    }
+    .close{
+        font-size: xx-large !important;
+    }
+    .user-rating{
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width:800px){ */
+    h1, h2, h3{
+        font-size: x-large !important;
+    }
+    h4,h5,h6{
+        font-size: medium !important;
+    }
+    p, li, a, .button, label, span{
+        font-size: small !important;
+    }
+    nav{
+        width: 100% !important;
+        position: fixed;
+        padding: 0 50px 0 0 ;
+    }
+    .header-text{
+        font-size:x-small;
+    }
+    .container{
+        width: 100vw;
+    }
+    #nav_links{
+        width: 100%;
+        height: 100px;
+        background-color: white;
+    }
+    #about-section, #menu-section, #contact-us, #gallery{
+        margin-top: 0;
+        padding: 10px;
+    }
+    #about-section{
+        padding: 10px;
+    }
+    .about-photo, .about-content-text{
+        height: max-content;
+        width: 100vw !important;
+    }
+    .menu-items{
+        padding: 30px 10px !important;
+        width: 100% !important;
+    }
+    .menu-items h4{
+        top: -10px;
+    }
+    .item-types{
+        margin-top: 15px;
+    }
+    .item-types{
+        font-size: medium;
+    }
+    .price-button{
+        gap: 5px;
+    }
+    footer .container{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .gallery-contents{
+        height: 500px;
+    }
+    .menu-items h4{
+        top: -20px;
+    }
+    .to-top{
+        right: 10px;
+        padding: 5px 10px;
+    }
+    .to-top a i{
+        font-size: x-large;
+        color: white;
+    }
+}
