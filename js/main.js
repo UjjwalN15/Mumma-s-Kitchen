@@ -132,6 +132,8 @@ radios.forEach((radio) => {
     const cod = document.getElementById('cod');
     const mobileNumberOnlineID = document.getElementById('mobileNumber');
     const PaymentSuccessful = document.getElementById('PaymentSuccessful');
+    const FileInput = document.getElementById('PaymentSuccessful');
+    const CodmobileNumber = document.getElementById('CodmobileNumber');
     radio.addEventListener("change", function () {
         // Reset visibility for all sections
         paymentOnline.style.display = 'none';
@@ -141,27 +143,31 @@ radios.forEach((radio) => {
             paymentOnline.style.display = 'block';
             mobileNumberOnlineID.value = '9768431599';
             PaymentSuccessful.style.display = 'inline-block';
+            FileInput.required = true;
+            CodmobileNumber.required = false;
         } else if (radio.value === 'khalti') {
             paymentOnline.style.display = 'block';
             mobileNumberOnlineID.value = '9841588049';
             PaymentSuccessful.style.display = 'inline-block';
+            FileInput.required = true;
+            CodmobileNumber.required = false;
         } else if (radio.value === 'cash') {
             cod.style.display = 'block';
+            FileInput.required = false;
+            CodmobileNumber.required = true;
         }
     
     });
 });
 
 
-const logo_container = document.querySelector('.logo-container')
+// const logo_container = document.querySelector('.logo-container')
 window.addEventListener('scroll',()=>{
     if (window.innerWidth <= 500 && window.scrollY > 200) {
-        logo_container.style.display = 'block';
+        // logo_container.style.display = 'block';
         menu_bars.style.display = 'block';
         close_icon.style.display = 'none';
-        logo_container.style.display = 'flex';
     }else{
-        logo_container.style.display = 'none';
         menu_bars.style.display = 'none';
     }
 });
@@ -188,3 +194,25 @@ close_icon.addEventListener('click', ()=>{
         hamburger_icon.style.display = 'none';
     }
 });
+
+const message_form = document.getElementById('message_form');
+message_form.addEventListener('submit',()=>{
+    alert("Your message is saved successfully. Thank you !!!")
+});
+
+const order_form = document.getElementById('order_form');
+const order_food = document.getElementById('food-name');
+const order_food_price = document.getElementById('food-price');
+const order_food_quantity = document.getElementById('food-quantity');
+
+order_form.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevents the form from actually submitting to show the alert first
+
+    // Convert price and quantity to numbers before calculating total
+    const price = parseInt(order_food_price.value);
+    const quantity = parseInt(order_food_quantity.value, 10);
+    const total = price * quantity;
+
+    alert(`${quantity} orders for ${order_food.value} with price ${order_food_price.value} saved. Your total will be ${total}. Thank you!!!`);
+});
+
